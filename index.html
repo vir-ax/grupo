@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentando al Equipo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- BOTÓN DE MÚSICA FIJO -->
+    <button id="music-btn" aria-label="Reproducir/Pausar música">
+        <svg id="music-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 19V5L18 12L8 19Z" fill="white"/>
+        </svg>
+    </button>
+
+    <!-- AUDIO -->
+    <audio id="bg-music" loop>
+        <source src="Musica.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- CANVAS PARA ESTRELLAS ROJAS + CONFETI -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- INTRO: SOLO PRESENTANDO -->
+    <div id="intro-screen">
+        <!-- Texto inicial -->
+        <h1 id="presentando-text">PRESENTANDO A NUESTRO EQUIPO</h1>
+
+        <!-- Reflectores -->
+        <div id="spotlights">
+            <div class="beam beam1"></div>
+            <div class="beam beam2"></div>
+            <div class="beam beam3"></div>
+        </div>
+
+        <!-- Flash blanco -->
+        <div id="white-flash"></div>
+    </div>
+
+    <!-- PANTALLA PRINCIPAL -->
+    <div id="main-screen">
+        <h2 id="main-title">CONOCE A NUESTRO EQUIPO</h2>
+        
+        <div class="profiles-container">
+            <!-- Perfil Sofia -->
+            <div class="profile-card" data-url="sofia.html">
+                <div class="glow-layer"></div>
+                <div class="photo-wrapper">
+                    <img src="Sofia.png" alt="Sofía Florencia Moreno" class="profile-photo">
+                    <div class="play-button">▶</div>
+                </div>
+                <p class="profile-name">SOFIA FLORENCIA MORENO</p>
+            </div>
+
+            <!-- Perfil Selena -->
+            <div class="profile-card" data-url="selena.html">
+                <div class="glow-layer"></div>
+                <div class="photo-wrapper">
+                    <img src="sele.png" alt="Selena Mendez" class="profile-photo">
+                    <div class="play-button">▶</div>
+                </div>
+                <p class="profile-name">SELENA MENDEZ</p>
+            </div>
+        </div>
+
+        <p id="click-instruction">HACER CLIK EN EL PERFIL QUE QUIERAS VER</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
